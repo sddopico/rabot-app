@@ -123,6 +123,10 @@
           }
         }
       }
-    }},
-  "defaultProject": "rabot-app"
+    }
+  },
+  "defaultProject": "rabot-app",
+  "cli": {
+    "analytics": "e777b0c4-8aa0-41a5-84e9-fa4fe6f59a03"
+  }
 }
