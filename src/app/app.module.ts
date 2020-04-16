@@ -7,11 +7,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { NbThemeModule, NbLayoutModule } from '@nebular/theme';
 import { NbEvaIconsModule } from '@nebular/eva-icons';
 import { SchedulerComponent } from './scheduler/scheduler.component';
+import { EventComponent } from './event/event.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SchedulerComponent
+    SchedulerComponent,
+    EventComponent
   ],
   imports: [
     BrowserModule,
