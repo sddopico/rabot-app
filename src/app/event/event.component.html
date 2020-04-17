@@ -1,18 +1,25 @@
-<div *ngFor="let dates of date">
-  <nb-card size="tiny" status="primary">
-    <nb-card-header></nb-card-header>
-    <nb-card-body>
-      <h1>
-        {{ dates.month }}
-        {{ dates.day }}
-      </h1>
-      <nb-card-footer>
-        <nb-actions size="large">
-          <nb-icon icon="radio-button-on-outline" status="success"></nb-icon>
-          <nb-icon icon="radio-button-on-outline" status="success"></nb-icon>
-          <nb-icon icon="radio-button-on-outline" status="success"></nb-icon>
+<nb-layout>
+  <nb-layout-column *ngFor="let dates of date">
+    <nb-card status="primary">
+      <nb-card-header></nb-card-header>
+      <nb-card-body>
+        <h1>
+          {{ dates.month }}
+          <br />
+          {{ dates.day }}
+        </h1>
+        <nb-actions>
+          <nb-action class="frst">
+            <nb-icon icon="radio-button-on-outline" status="success"></nb-icon>
+          </nb-action>
+          <nb-action>
+            <nb-icon icon="radio-button-on-outline" status="success"></nb-icon>
+          </nb-action>
+          <nb-action>
+            <nb-icon icon="radio-button-on-outline" status="success"></nb-icon>
+          </nb-action>
         </nb-actions>
-      </nb-card-footer>
-    </nb-card-body>
-  </nb-card>
-</div>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
+</nb-layout>
