@@ -1,1 +1,18 @@
-<p>event works!</p>
+<div *ngFor="let dates of date">
+  <nb-card size="tiny" status="primary">
+    <nb-card-header></nb-card-header>
+    <nb-card-body>
+      <h1>
+        {{ dates.month }}
+        {{ dates.day }}
+      </h1>
+      <nb-card-footer>
+        <nb-actions size="large">
+          <nb-icon icon="radio-button-on-outline" status="success"></nb-icon>
+          <nb-icon icon="radio-button-on-outline" status="success"></nb-icon>
+          <nb-icon icon="radio-button-on-outline" status="success"></nb-icon>
+        </nb-actions>
+      </nb-card-footer>
+    </nb-card-body>
+  </nb-card>
+</div>
