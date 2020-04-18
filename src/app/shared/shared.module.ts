@@ -8,9 +8,10 @@ import {
   NbActionsModule
 } from "@nebular/theme";
 import { NbEvaIconsModule } from "@nebular/eva-icons";
+import { ShellComponent } from "./shell/shell.component";
 
 @NgModule({
-  declarations: [],
+  declarations: [ShellComponent],
   imports: [
     CommonModule,
     NbLayoutModule,
@@ -27,7 +28,8 @@ import { NbEvaIconsModule } from "@nebular/eva-icons";
     NbIconModule,
     NbActionsModule,
     NbEvaIconsModule,
-    NbThemeModule
+    NbThemeModule,
+    ShellComponent
   ]
 })
 export class SharedModule {}
