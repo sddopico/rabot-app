@@ -8,15 +8,17 @@ import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
 import { SchedulerComponent } from './scheduler/scheduler.component';
 import { EventComponent } from './event/event.component';
+import { HomePageComponent } from './home-page/home-page.component';
 
 @NgModule({
-  declarations: [AppComponent, SchedulerComponent, EventComponent],
+  declarations: [AppComponent, SchedulerComponent, EventComponent, HomePageComponent],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
   ],
+  exports: [AppComponent],
   providers: [],
   bootstrap: [AppComponent],
 })
