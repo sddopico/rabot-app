@@ -1,14 +1,15 @@
-import { NgModule } from "@angular/core";
-import { CommonModule } from "@angular/common";
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import { RouterModule } from '@angular/router';
 import {
   NbThemeModule,
   NbLayoutModule,
   NbCardModule,
   NbIconModule,
-  NbActionsModule
-} from "@nebular/theme";
-import { NbEvaIconsModule } from "@nebular/eva-icons";
-import { ShellComponent } from "./shell/shell.component";
+  NbActionsModule,
+} from '@nebular/theme';
+import { NbEvaIconsModule } from '@nebular/eva-icons';
+import { ShellComponent } from './shell/shell.component';
 
 @NgModule({
   declarations: [ShellComponent],
@@ -19,7 +20,8 @@ import { ShellComponent } from "./shell/shell.component";
     NbIconModule,
     NbActionsModule,
     NbEvaIconsModule,
-    NbThemeModule.forRoot({ name: "dark" })
+    NbThemeModule.forRoot({ name: 'dark' }),
+    RouterModule,
   ],
   exports: [
     CommonModule,
@@ -29,7 +31,7 @@ import { ShellComponent } from "./shell/shell.component";
     NbActionsModule,
     NbEvaIconsModule,
     NbThemeModule,
-    ShellComponent
-  ]
+    ShellComponent,
+  ],
 })
 export class SharedModule {}
