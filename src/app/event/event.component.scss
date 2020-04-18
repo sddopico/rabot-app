@@ -3,6 +3,11 @@ nb-actions.size-small nb-action {
   border-left: none;
 }
 
+nb-actions.size-small nb-action:first-of-type {
+  margin-left: 0.5rem;
+}
+
 h1 {
-  margin: 0.5rem 0;
+  margin: 0.5rem;
+  display: inline-block;
 }

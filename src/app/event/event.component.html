@@ -1,22 +1,20 @@
-<nb-layout>
-  <nb-layout-column *ngFor="let dates of date">
-    <nb-card status="primary">
+<nb-layout center="true">
+  <nb-layout-column>
+    <nb-card status="primary" *ngFor="let dates of date">
       <nb-card-header></nb-card-header>
       <nb-card-body>
         <h1>
           {{ dates.month }}
-          <br />
+        </h1>
+        <h1>
           {{ dates.day }}
         </h1>
         <nb-actions>
-          <nb-action class="frst">
-            <nb-icon icon="radio-button-on-outline" status="success"></nb-icon>
-          </nb-action>
-          <nb-action>
-            <nb-icon icon="radio-button-on-outline" status="success"></nb-icon>
-          </nb-action>
-          <nb-action>
-            <nb-icon icon="radio-button-on-outline" status="success"></nb-icon>
+          <nb-action *ngFor="let slot of dates.slots; let i = index">
+            <nb-icon
+              icon="radio-button-on-outline"
+              [status]="slot[i] ? 'success' : 'danger'"
+            ></nb-icon>
           </nb-action>
         </nb-actions>
       </nb-card-body>
