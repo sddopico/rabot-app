@@ -10,8 +10,11 @@
           {{ dates.day }}
         </h1>
         <nb-actions>
-          <nb-action *ngFor="let slot of dates.slots">
-            <nb-icon icon="radio-button-on-outline" status="success"></nb-icon>
+          <nb-action *ngFor="let slot of dates.slots; let i = index">
+            <nb-icon
+              icon="radio-button-on-outline"
+              [status]="slot[i] ? 'success' : 'danger'"
+            ></nb-icon>
           </nb-action>
         </nb-actions>
       </nb-card-body>
