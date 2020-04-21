@@ -9,14 +9,21 @@ import { SharedModule } from './shared/shared.module';
 import { SchedulerComponent } from './scheduler/scheduler.component';
 import { EventComponent } from './event/event.component';
 import { HomePageComponent } from './home-page/home-page.component';
+import { auth } from 'firebase/app';
 
 @NgModule({
-  declarations: [AppComponent, SchedulerComponent, EventComponent, HomePageComponent],
+  declarations: [
+    AppComponent,
+    SchedulerComponent,
+    EventComponent,
+    HomePageComponent,
+  ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     BrowserAnimationsModule,
     SharedModule,
+    auth,
   ],
   exports: [AppComponent],
   providers: [],
