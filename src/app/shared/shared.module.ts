@@ -1,15 +1,20 @@
-import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
-import { RouterModule } from '@angular/router';
+import { NgModule } from "@angular/core";
+import { CommonModule } from "@angular/common";
+import { RouterModule } from "@angular/router";
 import {
   NbThemeModule,
   NbLayoutModule,
   NbCardModule,
   NbIconModule,
-  NbActionsModule,
-} from '@nebular/theme';
-import { NbEvaIconsModule } from '@nebular/eva-icons';
-import { ShellComponent } from './shell/shell.component';
+  NbActionsModule
+} from "@nebular/theme";
+
+import { NbEvaIconsModule } from "@nebular/eva-icons";
+import { ShellComponent } from "./shell/shell.component";
+
+import { AngularFirestoreModule } from "@angular/fire/firestore";
+import { AngularFireStorageModule } from "@angular/fire/storage";
+import { AngularFireAuthModule } from "@angular/fire/auth";
 
 @NgModule({
   declarations: [ShellComponent],
@@ -20,8 +25,11 @@ import { ShellComponent } from './shell/shell.component';
     NbIconModule,
     NbActionsModule,
     NbEvaIconsModule,
-    NbThemeModule.forRoot({ name: 'dark' }),
+    NbThemeModule.forRoot({ name: "dark" }),
     RouterModule,
+    AngularFireStorageModule,
+    AngularFirestoreModule,
+    AngularFireAuthModule
   ],
   exports: [
     CommonModule,
@@ -32,6 +40,9 @@ import { ShellComponent } from './shell/shell.component';
     NbEvaIconsModule,
     NbThemeModule,
     ShellComponent,
-  ],
+    AngularFireStorageModule,
+    AngularFirestoreModule,
+    AngularFireAuthModule
+  ]
 })
 export class SharedModule {}

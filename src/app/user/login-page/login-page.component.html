@@ -1,1 +1,7 @@
-<p>login-page works!</p>
+<div *ngIf="!(afAuth.authState | async)">
+  <button appGoogleSignin>Signin</button>
+</div>
+
+<div *ngIf="afAuth.authState | async as user">
+  <button routerLink="/scheduler">Schedule some shit</button>
+</div>
