@@ -1,7 +1,17 @@
-<div *ngIf="!(afAuth.authState | async)">
-  <button appGoogleSignin>Signin</button>
-</div>
-
-<div *ngIf="afAuth.authState | async as user">
-  <button routerLink="/scheduler">Schedule some shit</button>
-</div>
+<nb-layout>
+  <nb-layout-column>
+    <nb-card>
+      <nb-card-body>
+        <p>Current User Authenticated: {{ !!token }}</p>
+        <p></p>
+        <pre>Current User Token: {{ token | json }}</pre>
+        <button nbButton status="success" *ngIf="!token" (click)="login()">
+          Sign In with Google
+        </button>
+        <button nbButton status="warning" *ngIf="token" (click)="logout()">
+          Sign Out
+        </button>
+      </nb-card-body>
+    </nb-card>
+  </nb-layout-column>
+</nb-layout>

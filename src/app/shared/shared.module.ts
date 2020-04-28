@@ -16,6 +16,8 @@ import { AngularFirestoreModule } from "@angular/fire/firestore";
 import { AngularFireStorageModule } from "@angular/fire/storage";
 import { AngularFireAuthModule } from "@angular/fire/auth";
 
+import { NbAuthModule } from "@nebular/auth";
+
 @NgModule({
   declarations: [ShellComponent],
   imports: [
@@ -29,7 +31,8 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
     RouterModule,
     AngularFireStorageModule,
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    NbAuthModule
   ],
   exports: [
     CommonModule,
@@ -42,7 +45,8 @@ import { AngularFireAuthModule } from "@angular/fire/auth";
     ShellComponent,
     AngularFireStorageModule,
     AngularFirestoreModule,
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    NbAuthModule
   ]
 })
 export class SharedModule {}
